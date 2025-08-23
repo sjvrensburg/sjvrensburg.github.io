@@ -1,0 +1,6 @@
+Contact: mailto:stefan@example.com
+Contact: https://github.com/sjvrensburg/sjvrensburg.github.io/security/advisories/new
+Expires: 2026-08-23T14:00:00.000Z
+Acknowledgments: https://sjvrensburg.github.io/about/
+Preferred-Languages: en
+Canonical: https://sjvrensburg.github.io/.well-known/security.txt

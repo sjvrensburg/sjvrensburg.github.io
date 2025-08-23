@@ -1,0 +1,88 @@
+baseURL = 'https://sjvrensburg.github.io/'
+languageCode = 'en'
+title = 'Stefan van Rensburg'
+theme = 'terminal'
+paginate = 5
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  fullWidthTheme = false
+  centerTheme = true
+  autoCover = true
+  showMenuItems = 4
+  showLanguageSelector = false
+  contentTypeName = 'posts'
+  themeColor = 'blue'
+  
+  author = 'Stefan van Rensburg'
+  description = 'Personal blog and portfolio of Stefan van Rensburg - software engineering, technology insights, and professional journey'
+  keywords = ['Stefan van Rensburg', 'software engineering', 'technology', 'blog', 'development']
+
+  [params.twitter]
+    cardType = 'summary_large_image'
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    title = 'Stefan van Rensburg'
+    subtitle = 'Software Engineer & Technology Enthusiast'
+    owner = 'Stefan van Rensburg'
+    keywords = ['Stefan van Rensburg', 'software engineering', 'technology', 'blog']
+    copyright = '© 2025 Stefan van Rensburg'
+    menuMore = 'Show more'
+    readMore = 'Read more'
+    readOtherPosts = 'Read other posts'
+    newerPosts = 'Newer posts'
+    olderPosts = 'Older posts'
+    missingContentMessage = 'Page not found...'
+    missingBackButtonLabel = 'Back to home page'
+    minuteReadingTime = 'min read'
+    words = 'words'
+
+    [languages.en.params.logo]
+      logoText = 'Stefan van Rensburg'
+      logoHomeLink = '/'
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = 'about'
+        name = 'About'
+        url = '/about'
+        weight = 10
+      
+      [[languages.en.menu.main]]
+        identifier = 'posts'
+        name = 'Posts'
+        url = '/posts'
+        weight = 20
+      
+      [[languages.en.menu.main]]
+        identifier = 'contact'
+        name = 'Contact'
+        url = '/contact'
+        weight = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = 'github'

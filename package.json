@@ -1,0 +1,34 @@
+{
+  "name": "sjvrensburg-blog",
+  "version": "1.0.0",
+  "description": "Personal blog of Stefan van Rensburg built with Hugo",
+  "scripts": {
+    "dev": "hugo server --buildDrafts --buildFuture --disableFastRender",
+    "build": "hugo --gc --minify",
+    "build:preview": "hugo --gc --minify --buildDrafts --buildFuture",
+    "serve": "hugo server --buildDrafts --buildFuture --navigateToChanged",
+    "serve:production": "hugo server --environment production --disableFastRender",
+    "clean": "rm -rf public resources",
+    "new:post": "hugo new content posts/",
+    "new:page": "hugo new content",
+    "deploy": "npm run build && gh-pages -d public",
+    "lint": "echo 'No linting configured yet'",
+    "check": "hugo --gc --minify --printMemoryUsage --printPathWarnings"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjvrensburg/sjvrensburg.github.io.git"
+  },
+  "keywords": [
+    "hugo",
+    "blog",
+    "static-site-generator",
+    "github-pages"
+  ],
+  "author": "Stefan van Rensburg",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
