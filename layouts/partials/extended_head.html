@@ -1,0 +1,54 @@
+{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+
+<!-- Additional CSS overrides for Terminal theme -->
+<style>
+/* Force Terminal theme colors with highest priority */
+.header .logo,
+.header__logo .logo,
+div.logo,
+.logo {
+  background-color: #141c2b !important;
+  background: #141c2b !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .header .logo,
+[data-theme="dark"] .header__logo .logo,
+[data-theme="dark"] div.logo,
+[data-theme="dark"] .logo {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  color: #141c2b !important;
+}
+
+.header__logo::after {
+  background: repeating-linear-gradient(90deg, #141c2b, #141c2b 2px, transparent 0, transparent 10px) !important;
+}
+
+[data-theme="dark"] .header__logo::after {
+  background: repeating-linear-gradient(90deg, #FFFFFF, #FFFFFF 2px, transparent 0, transparent 10px) !important;
+}
+</style>
+
+<!-- MathJax for math rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<!-- Theme toggle JavaScript -->
+<script src="{{ "js/theme-toggle.js" | absURL }}" defer></script>

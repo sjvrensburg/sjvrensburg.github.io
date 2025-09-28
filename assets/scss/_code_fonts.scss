@@ -1,0 +1,69 @@
+// Iosevka font face definitions
+// Place font files in /static/fonts/ directory
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-regular.woff2') format('woff2'),
+       url('/fonts/iosevka-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-bold.woff2') format('woff2'),
+       url('/fonts/iosevka-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-italic.woff2') format('woff2'),
+       url('/fonts/iosevka-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Apply Iosevka font to code elements
+code,
+pre,
+pre code,
+.chroma,
+.chroma code,
+.highlight,
+.highlight code,
+kbd,
+samp,
+tt {
+  font-family: $code-font !important;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+// Additional code block styling
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 4px;
+
+  code {
+    background: transparent;
+    padding: 0;
+    border: none;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+}
+
+// Inline code styling
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.85em;
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+}

@@ -1,0 +1,43 @@
+// Color scheme variables for light and dark themes
+// Override Terminal theme default colors
+
+// Light theme colors
+$light-body-bg: #FFFFFF;
+$light-text-color: #141c2b;
+$light-accent-color: #141c2b;
+
+// Dark theme colors
+$dark-body-bg: #141c2b;
+$dark-text-color: #FFFFFF;
+$dark-accent-color: #FFFFFF;
+
+// Font families
+$primary-font: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$code-font: 'Iosevka', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
+// Terminal theme variable overrides
+$background: var(--background);
+$color: var(--accent);
+$border-color: var(--accent);
+
+// CSS custom properties for theme switching
+:root {
+  --background: #{$light-body-bg};
+  --accent: #{$light-text-color};
+  --color: #{$light-text-color};
+}
+
+[data-theme="dark"] {
+  --background: #{$dark-body-bg};
+  --accent: #{$dark-text-color};
+  --color: #{$dark-text-color};
+}
+
+// Media query for system dark mode preference
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #{$dark-body-bg};
+    --accent: #{$dark-text-color};
+    --color: #{$dark-text-color};
+  }
+}

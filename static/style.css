@@ -1,0 +1,509 @@
+/* Custom CSS overrides for Terminal theme */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/* Iosevka font definitions */
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-regular.woff2') format('woff2'),
+       url('/fonts/iosevka-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-bold.woff2') format('woff2'),
+       url('/fonts/iosevka-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/fonts/iosevka-italic.woff2') format('woff2'),
+       url('/fonts/iosevka-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Color scheme variables - Override Terminal theme */
+:root {
+  --background: #FFFFFF !important;
+  --accent: #141c2b !important;
+  --color: #141c2b !important;
+  --border-color: #141c2b !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141c2b !important;
+    --accent: #FFFFFF !important;
+    --color: #FFFFFF !important;
+    --border-color: #FFFFFF !important;
+  }
+}
+
+[data-theme="dark"] {
+  --background: #141c2b !important;
+  --accent: #FFFFFF !important;
+  --color: #FFFFFF !important;
+  --border-color: #FFFFFF !important;
+}
+
+/* Force Terminal theme elements to use our colors */
+.terminal-theme,
+.container,
+main,
+.main,
+.wrapper {
+  background-color: var(--background) !important;
+  color: var(--color) !important;
+}
+
+/* Base typography with Nunito Sans */
+body,
+.container,
+.header,
+.content,
+.posts,
+.post {
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background-color: var(--background) !important;
+  color: var(--color) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.logo__text,
+.menu__inner,
+.post-title,
+.post-meta {
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+/* Terminal theme color overrides - force dark blue colors */
+/* Override all Terminal theme header colors with strong selectors */
+
+/* Logo block - the main colored rectangle */
+.header .logo,
+.header__logo .logo,
+.header .header__logo .logo,
+div.logo {
+  background-color: #141c2b !important;
+  background: #141c2b !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .header .logo,
+[data-theme="dark"] .header__logo .logo,
+[data-theme="dark"] .header .header__logo .logo,
+[data-theme="dark"] div.logo {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  color: #141c2b !important;
+}
+
+/* Header vertical lines pattern - the repeating gradient */
+.header .header__logo::after,
+.header__logo::after {
+  background: repeating-linear-gradient(90deg, #141c2b, #141c2b 2px, transparent 0, transparent 10px) !important;
+}
+
+[data-theme="dark"] .header .header__logo::after,
+[data-theme="dark"] .header__logo::after {
+  background: repeating-linear-gradient(90deg, #FFFFFF, #FFFFFF 2px, transparent 0, transparent 10px) !important;
+}
+
+/* Override Terminal theme CSS variables completely */
+.header {
+  --accent: #141c2b !important;
+}
+
+[data-theme="dark"] .header {
+  --accent: #FFFFFF !important;
+}
+
+/* Force override any Terminal theme default colors */
+body .header .logo,
+html .header .logo {
+  background-color: #141c2b !important;
+}
+
+[data-theme="dark"] body .header .logo,
+[data-theme="dark"] html .header .logo {
+  background-color: #FFFFFF !important;
+}
+
+/* Code elements with Iosevka */
+code,
+pre,
+pre code,
+.chroma,
+.chroma code,
+.highlight,
+.highlight code,
+kbd,
+samp,
+tt {
+  font-family: 'Iosevka', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* Enhanced code block styling with better contrast */
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #f8f9fa !important;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] pre {
+  background: #2d3748 !important;
+  border: 1px solid #4a5568;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+pre code {
+  background: transparent !important;
+  padding: 0;
+  border: none;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #2d3748 !important;
+}
+
+[data-theme="dark"] pre code {
+  color: #e2e8f0 !important;
+}
+
+/* Inline code styling with better contrast */
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  background: #f1f3f4 !important;
+  border: 1px solid #d0d7de;
+  color: #d73a49 !important;
+  font-weight: 500;
+}
+
+[data-theme="dark"] code {
+  background: #374151 !important;
+  border: 1px solid #4b5563;
+  color: #f87171 !important;
+}
+
+/* Navigation and menu */
+.menu__inner a {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  color: var(--accent) !important;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--accent) !important;
+}
+
+/* Improved typography */
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--background);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--accent);
+  margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--background);
+  transform: scale(1.1);
+}
+
+.theme-toggle__icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  filter: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon {
+  transform: rotate(180deg);
+}
+
+/* Navigation menu layout */
+.navigation-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navigation-menu__inner {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-menu__inner.menu--desktop {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-menu__inner li {
+  margin-right: 1rem;
+}
+
+.navigation-menu__inner li:last-child {
+  margin-right: 0;
+}
+
+/* Theme toggle positioning in header */
+.header__inner .theme-toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Syntax highlighting improvements */
+.chroma .k,    /* Keywords */
+.chroma .kd,   /* Keyword declaration */
+.chroma .kn,   /* Keyword namespace */
+.chroma .kp,   /* Keyword pseudo */
+.chroma .kr,   /* Keyword reserved */
+.chroma .kt {  /* Keyword type */
+  color: #d73a49 !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .chroma .k,
+[data-theme="dark"] .chroma .kd,
+[data-theme="dark"] .chroma .kn,
+[data-theme="dark"] .chroma .kp,
+[data-theme="dark"] .chroma .kr,
+[data-theme="dark"] .chroma .kt {
+  color: #ff7b72 !important;
+}
+
+.chroma .s,    /* Strings */
+.chroma .s1,   /* String single */
+.chroma .s2,   /* String double */
+.chroma .sb,   /* String backtick */
+.chroma .sc,   /* String char */
+.chroma .sd,   /* String doc */
+.chroma .se,   /* String escape */
+.chroma .sh,   /* String heredoc */
+.chroma .si,   /* String interpol */
+.chroma .sx {  /* String other */
+  color: #032f62 !important;
+}
+
+[data-theme="dark"] .chroma .s,
+[data-theme="dark"] .chroma .s1,
+[data-theme="dark"] .chroma .s2,
+[data-theme="dark"] .chroma .sb,
+[data-theme="dark"] .chroma .sc,
+[data-theme="dark"] .chroma .sd,
+[data-theme="dark"] .chroma .se,
+[data-theme="dark"] .chroma .sh,
+[data-theme="dark"] .chroma .si,
+[data-theme="dark"] .chroma .sx {
+  color: #9ecbff !important;
+}
+
+.chroma .c,    /* Comments */
+.chroma .c1,   /* Comment single */
+.chroma .ch,   /* Comment hashbang */
+.chroma .cm,   /* Comment multiline */
+.chroma .cp,   /* Comment preproc */
+.chroma .cpf { /* Comment preproc file */
+  color: #6a737d !important;
+  font-style: italic;
+}
+
+[data-theme="dark"] .chroma .c,
+[data-theme="dark"] .chroma .c1,
+[data-theme="dark"] .chroma .ch,
+[data-theme="dark"] .chroma .cm,
+[data-theme="dark"] .chroma .cp,
+[data-theme="dark"] .chroma .cpf {
+  color: #8b949e !important;
+}
+
+.chroma .n,    /* Names */
+.chroma .na,   /* Name attribute */
+.chroma .nb,   /* Name builtin */
+.chroma .nc,   /* Name class */
+.chroma .nd,   /* Name decorator */
+.chroma .ne,   /* Name exception */
+.chroma .nf,   /* Name function */
+.chroma .ni,   /* Name entity */
+.chroma .nl,   /* Name label */
+.chroma .nn,   /* Name namespace */
+.chroma .no,   /* Name constant */
+.chroma .nt,   /* Name tag */
+.chroma .nv,   /* Name variable */
+.chroma .nx {  /* Name other */
+  color: #6f42c1 !important;
+}
+
+[data-theme="dark"] .chroma .n,
+[data-theme="dark"] .chroma .na,
+[data-theme="dark"] .chroma .nb,
+[data-theme="dark"] .chroma .nc,
+[data-theme="dark"] .chroma .nd,
+[data-theme="dark"] .chroma .ne,
+[data-theme="dark"] .chroma .nf,
+[data-theme="dark"] .chroma .ni,
+[data-theme="dark"] .chroma .nl,
+[data-theme="dark"] .chroma .nn,
+[data-theme="dark"] .chroma .no,
+[data-theme="dark"] .chroma .nt,
+[data-theme="dark"] .chroma .nv,
+[data-theme="dark"] .chroma .nx {
+  color: #d2a8ff !important;
+}
+
+.chroma .m,    /* Numbers */
+.chroma .mb,   /* Number bin */
+.chroma .mf,   /* Number float */
+.chroma .mh,   /* Number hex */
+.chroma .mi,   /* Number integer */
+.chroma .mo {  /* Number oct */
+  color: #005cc5 !important;
+}
+
+[data-theme="dark"] .chroma .m,
+[data-theme="dark"] .chroma .mb,
+[data-theme="dark"] .chroma .mf,
+[data-theme="dark"] .chroma .mh,
+[data-theme="dark"] .chroma .mi,
+[data-theme="dark"] .chroma .mo {
+  color: #79c0ff !important;
+}
+
+/* Operators and punctuation - high contrast */
+.chroma .o,    /* Operators */
+.chroma .ow,   /* Operator word */
+.chroma .p {   /* Punctuation */
+  color: #24292e !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .chroma .o,
+[data-theme="dark"] .chroma .ow,
+[data-theme="dark"] .chroma .p {
+  color: #f0f6fc !important;
+  font-weight: 600;
+}
+
+/* All code content - ensure high contrast base */
+.chroma,
+.chroma * {
+  color: #24292e !important;
+}
+
+[data-theme="dark"] .chroma,
+[data-theme="dark"] .chroma * {
+  color: #e6edf3 !important;
+}
+
+/* Override for specific token types to maintain syntax highlighting */
+.chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr, .chroma .kt { color: #d73a49 !important; }
+.chroma .s, .chroma .s1, .chroma .s2, .chroma .sb, .chroma .sc, .chroma .sd, .chroma .se, .chroma .sh, .chroma .si, .chroma .sx { color: #032f62 !important; }
+.chroma .c, .chroma .c1, .chroma .ch, .chroma .cm, .chroma .cp, .chroma .cpf { color: #6a737d !important; }
+.chroma .n, .chroma .na, .chroma .nb, .chroma .nc, .chroma .nd, .chroma .ne, .chroma .nf, .chroma .ni, .chroma .nl, .chroma .nn, .chroma .no, .chroma .nt, .chroma .nv, .chroma .nx { color: #6f42c1 !important; }
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .mo { color: #005cc5 !important; }
+
+[data-theme="dark"] .chroma .k, [data-theme="dark"] .chroma .kd, [data-theme="dark"] .chroma .kn, [data-theme="dark"] .chroma .kp, [data-theme="dark"] .chroma .kr, [data-theme="dark"] .chroma .kt { color: #ff7b72 !important; }
+[data-theme="dark"] .chroma .s, [data-theme="dark"] .chroma .s1, [data-theme="dark"] .chroma .s2, [data-theme="dark"] .chroma .sb, [data-theme="dark"] .chroma .sc, [data-theme="dark"] .chroma .sd, [data-theme="dark"] .chroma .se, [data-theme="dark"] .chroma .sh, [data-theme="dark"] .chroma .si, [data-theme="dark"] .chroma .sx { color: #9ecbff !important; }
+[data-theme="dark"] .chroma .c, [data-theme="dark"] .chroma .c1, [data-theme="dark"] .chroma .ch, [data-theme="dark"] .chroma .cm, [data-theme="dark"] .chroma .cp, [data-theme="dark"] .chroma .cpf { color: #8b949e !important; }
+[data-theme="dark"] .chroma .n, [data-theme="dark"] .chroma .na, [data-theme="dark"] .chroma .nb, [data-theme="dark"] .chroma .nc, [data-theme="dark"] .chroma .nd, [data-theme="dark"] .chroma .ne, [data-theme="dark"] .chroma .nf, [data-theme="dark"] .chroma .ni, [data-theme="dark"] .chroma .nl, [data-theme="dark"] .chroma .nn, [data-theme="dark"] .chroma .no, [data-theme="dark"] .chroma .nt, [data-theme="dark"] .chroma .nv, [data-theme="dark"] .chroma .nx { color: #d2a8ff !important; }
+[data-theme="dark"] .chroma .m, [data-theme="dark"] .chroma .mb, [data-theme="dark"] .chroma .mf, [data-theme="dark"] .chroma .mh, [data-theme="dark"] .chroma .mi, [data-theme="dark"] .chroma .mo { color: #79c0ff !important; }
+
+/* FINAL OVERRIDE - Terminal theme CSS variables */
+/* Override Terminal theme's root CSS variables */
+:root {
+  --accent: #141c2b !important;
+  --background: #FFFFFF !important;
+  --foreground: #141c2b !important;
+}
+
+[data-theme="dark"] {
+  --accent: #FFFFFF !important;
+  --background: #141c2b !important;
+  --foreground: #FFFFFF !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #FFFFFF !important;
+    --background: #141c2b !important;
+    --foreground: #FFFFFF !important;
+  }
+}
+
+/* Force Terminal logo and header colors using CSS vars */
+.logo {
+  background: var(--accent) !important;
+  color: var(--background) !important;
+}
+
+.header__logo::after {
+  background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px) !important;
+}

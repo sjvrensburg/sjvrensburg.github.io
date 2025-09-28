@@ -1,0 +1,26 @@
+/* Terminal theme override with custom variables */
+:root {
+  --background: #FFFFFF !important;
+  --foreground: #141c2b !important;
+  --accent: #141c2b !important;
+}
+
+[data-theme="dark"] {
+  --background: #141c2b !important;
+  --foreground: #FFFFFF !important;
+  --accent: #FFFFFF !important;
+}
+
+/* Additional force overrides for the header specifically */
+.header .logo,
+.header__logo .logo,
+div.logo,
+.logo {
+  background-color: var(--accent) !important;
+  background: var(--accent) !important;
+  color: var(--background) !important;
+}
+
+.header__logo::after {
+  background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px) !important;
+}

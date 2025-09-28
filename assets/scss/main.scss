@@ -1,0 +1,146 @@
+// Main SCSS file for theme overrides
+// Import Google Fonts and custom styles
+
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+// Import custom SCSS files
+@import 'variables';
+@import 'code_fonts';
+
+// Base typography overrides
+body,
+.container,
+.header,
+.content,
+.posts,
+.post {
+  font-family: $primary-font;
+  background-color: var(--background);
+  color: var(--color);
+}
+
+// Heading styles with Nunito Sans
+h1, h2, h3, h4, h5, h6,
+.logo__text,
+.menu__inner,
+.post-title,
+.post-meta {
+  font-family: $primary-font;
+  color: var(--accent);
+}
+
+// Enhanced typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.1rem; }
+
+// Body text improvements
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+// Link styling
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-bottom-color: var(--accent);
+  }
+}
+
+// Navigation and menu overrides
+.menu__inner {
+  background: var(--background);
+
+  a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+}
+
+// Post content styling
+.post-content {
+  color: var(--color);
+
+  blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    margin-left: 0;
+    font-style: italic;
+    opacity: 0.8;
+  }
+}
+
+// Terminal theme specific overrides
+.terminal-theme {
+  --background: #{$light-body-bg};
+  --accent: #{$light-text-color};
+  --color: #{$light-text-color};
+}
+
+[data-theme="dark"] .terminal-theme {
+  --background: #{$dark-body-bg};
+  --accent: #{$dark-text-color};
+  --color: #{$dark-text-color};
+}
+
+// Responsive font sizing
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+// Enhanced accessibility
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Focus styles for keyboard navigation
+*:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// Print styles
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+}

@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      {{ partial "logo.html" . }}
+    </div>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+        <span class="theme-toggle__icon">🌙</span>
+      </button>
+    </div>
+    {{ if len $.Site.Menus }}
+      {{ partial "mobile-menu.html" . }}
+    {{ end }}
+    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+      {{ partial "language-menu.html" . }}
+    {{ end }}
+  </div>
+  {{ if len $.Site.Menus }}
+    {{ partial "menu.html" . }}
+  {{ end }}
+</header>
