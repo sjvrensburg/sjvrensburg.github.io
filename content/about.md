@@ -2,46 +2,72 @@
 title = 'About'
 date = 2025-08-23T14:48:49+02:00
 draft = false
-description = 'Learn more about Stefan van Rensburg - software engineer, technology enthusiast, and blogger'
+description = 'Learn more about Stefan - statistician, data scientist, and programming enthusiast from South Africa'
 +++
 
 # About Me
 
-Hello! I'm **Stefan van Rensburg**, a passionate software engineer with a deep love for creating elegant solutions to complex problems. Welcome to my personal corner of the internet where I share my thoughts, experiences, and insights from the world of technology.
+Hello! I'm **Stefan**, a statistician who loves programming, based in South Africa. I'm currently at Nelson Mandela University, where I combine my passion for statistical modeling with practical programming skills to turn data into actionable insights.
 
-## Professional Journey
+## Professional Focus
 
-With several years of experience in software development, I've had the opportunity to work across various domains and technologies. My expertise spans:
+My work centers around the intersection of statistics, data science, and software development. I'm particularly passionate about:
 
-- **Full-Stack Development**: Building robust web applications from frontend to backend
-- **System Architecture**: Designing scalable and maintainable software systems  
-- **Cloud Technologies**: Leveraging cloud platforms for modern application deployment
-- **DevOps Practices**: Implementing CI/CD pipelines and infrastructure as code
+- **Statistical Modeling**: Developing robust models for complex data problems
+- **Volatility Forecasting**: Working on advanced forecasting models for financial and economic data
+- **Machine Learning**: Applying ML techniques to solve real-world statistical challenges
+- **Data Science**: Extracting meaningful insights from complex datasets
 
-## What I'm Passionate About
+## Technical Expertise
 
-I believe that great software is not just about writing code—it's about understanding problems deeply, designing thoughtful solutions, and creating tools that genuinely improve people's lives. Some areas that particularly excite me include:
+I work primarily with:
 
-- **Web Performance**: Optimizing applications for speed and accessibility
-- **Developer Experience**: Building tools and processes that make developers more productive
-- **Open Source**: Contributing to and learning from the broader developer community
-- **Continuous Learning**: Staying current with emerging technologies and best practices
+- **Python**: My go-to language for data science, machine learning, and general programming
+- **R**: Essential for statistical analysis and modeling
+- **PyTorch**: Currently learning and applying for deep learning projects
+- **Data Science Stack**: Pandas, NumPy, Scikit-Learn, Jupyter
 
-## Beyond Code
+## Current Projects & Interests
 
-When I'm not immersed in code, you might find me:
+I'm always working on something interesting. Some of my current focus areas include:
 
-- Reading about the latest developments in technology and software engineering
-- Exploring new programming languages and frameworks
+- Developing volatility forecasting models
+- Creating tools for academic and research workflows
+- Building practical applications that bridge statistics and software engineering
+- Contributing to open source projects in the data science community
+
+## Notable Projects
+
+Some projects I've worked on include:
+
+- **R Markdown Templates for NMU**: Making academic writing more streamlined
+- **Moodle Extract Tool**: Simplifying course backup file management
+- **Webcam OCR**: Python application with virtual camera support for text recognition
+
+## What Drives Me
+
+I believe that statistics and programming, when combined thoughtfully, can solve incredibly complex problems. Whether it's forecasting market volatility, extracting insights from messy data, or building tools that make other researchers more productive, I'm motivated by the potential to make a real impact through code and analysis.
+
+## Beyond the Code
+
+When I'm not deep in data or writing code, I enjoy:
+
+- Exploring new statistical methodologies and their practical applications
 - Contributing to open source projects
-- Sharing knowledge through technical writing and community involvement
+- Learning about emerging technologies in the data science space
+- Sharing knowledge and collaborating with fellow data enthusiasts
 
 ## Let's Connect
 
-I'm always interested in connecting with fellow developers, technology enthusiasts, and anyone passionate about building great software. Whether you want to discuss a technical topic, collaborate on a project, or just say hello, I'd love to hear from you.
+I'm always interested in connecting with fellow statisticians, data scientists, programmers, and anyone passionate about using data to solve interesting problems. Whether you want to discuss a statistical challenge, collaborate on a project, or just share ideas, I'd love to hear from you.
 
-Feel free to reach out through any of the social links in the footer, or drop me a line via the [contact page](/contact/).
+Feel free to reach out:
+
+- **GitHub**: [sjvrensburg](https://github.com/sjvrensburg)
+- **Email**: stefanj@mandela.ac.za
+- **Twitter**: [@Stefan34288442](https://twitter.com/Stefan34288442)
+- **LinkedIn**: Available on my GitHub profile
 
 ---
 
-*This blog is built with [Hugo](https://gohugo.io/) and hosted on [GitHub Pages](https://pages.github.com/). The source code is available on [GitHub](https://github.com/sjvrensburg/sjvrensburg.github.io) if you're curious about how it's put together.*
+*This blog is built with [Hugo](https://gohugo.io/) using the Terminal theme and hosted on [GitHub Pages](https://pages.github.com/). The source code is available on [GitHub](https://github.com/sjvrensburg/sjvrensburg.github.io) if you're curious about the technical setup.*

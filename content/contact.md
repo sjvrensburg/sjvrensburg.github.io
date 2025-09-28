@@ -2,7 +2,7 @@
 title = 'Contact'
 date = 2025-08-23T14:48:53+02:00
 draft = false
-description = 'Get in touch with Stefan van Rensburg - available for collaboration, questions, and professional opportunities'
+description = 'Get in touch with Stefan - available for collaboration, questions, and professional opportunities'
 +++
 
 # Get In Touch
@@ -20,7 +20,7 @@ I'm always open to connecting with fellow developers, technology enthusiasts, an
   *Check out my projects, contribute to open source, or collaborate on code*
 
 ### Direct Communication
-- **Email**: [stefan@example.com](mailto:stefan@example.com)  
+- **Email**: [stefanj@mandela.ac.za](mailto:stefanj@mandela.ac.za)
   *For direct inquiries, collaboration proposals, or just to say hello*
 
 ## What I'm Open To

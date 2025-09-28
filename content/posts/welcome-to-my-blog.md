@@ -5,12 +5,12 @@ draft = false
 description = 'Welcome to my personal blog where I share insights about software engineering, web development, and technology trends'
 tags = ['welcome', 'intro', 'blog', 'software engineering']
 categories = ['Personal']
-author = 'Stefan van Rensburg'
+author = 'Stefan'
 +++
 
 Hello, and welcome to my blog! 🎉
 
-I'm **Stefan van Rensburg**, and I'm excited to share this new space with you where I'll be writing about software engineering, web development, technology trends, and the occasional deep dive into topics that fascinate me in the world of tech.
+I'm **Stefan**, and I'm excited to share this new space with you where I'll be writing about software engineering, web development, technology trends, and the occasional deep dive into topics that fascinate me in the world of tech.
 
 ## What You Can Expect
 

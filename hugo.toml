@@ -1,6 +1,6 @@
 baseURL = 'https://sjvrensburg.github.io/'
 languageCode = 'en'
-title = 'Stefan van Rensburg'
+title = 'Stefan'
 theme = 'terminal'
 paginate = 5
 
@@ -19,6 +19,11 @@ enableEmoji = true
   disableXML = true
   minifyOutput = true
 
+[assets]
+  [assets.scss]
+    precision = 6
+    outputStyle = "compressed"
+
 [params]
   fullWidthTheme = false
   centerTheme = true
@@ -28,9 +33,9 @@ enableEmoji = true
   contentTypeName = 'posts'
   themeColor = 'blue'
   
-  author = 'Stefan van Rensburg'
-  description = 'Personal blog and portfolio of Stefan van Rensburg - software engineering, technology insights, and professional journey'
-  keywords = ['Stefan van Rensburg', 'software engineering', 'technology', 'blog', 'development']
+  author = 'Stefan'
+  description = 'Personal blog and portfolio of Stefan - software engineering, technology insights, and professional journey'
+  keywords = ['Stefan', 'software engineering', 'technology', 'blog', 'development']
 
   [params.twitter]
     cardType = 'summary_large_image'
@@ -38,11 +43,11 @@ enableEmoji = true
 [languages]
   [languages.en]
     languageName = 'English'
-    title = 'Stefan van Rensburg'
+    title = 'Stefan'
     subtitle = 'Software Engineer & Technology Enthusiast'
-    owner = 'Stefan van Rensburg'
-    keywords = ['Stefan van Rensburg', 'software engineering', 'technology', 'blog']
-    copyright = '© 2025 Stefan van Rensburg'
+    owner = 'Stefan'
+    keywords = ['Stefan', 'software engineering', 'technology', 'blog']
+    copyright = '© 2025 Stefan'
     menuMore = 'Show more'
     readMore = 'Read more'
     readOtherPosts = 'Read other posts'
@@ -54,7 +59,7 @@ enableEmoji = true
     words = 'words'
 
     [languages.en.params.logo]
-      logoText = 'Stefan van Rensburg'
+      logoText = 'Stefan'
       logoHomeLink = '/'
 
     [languages.en.menu]
@@ -78,6 +83,16 @@ enableEmoji = true
 
 [markup]
   [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\\[', '\\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
