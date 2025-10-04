@@ -36,9 +36,10 @@ This is a Hugo-based static blog for Stefan van Rensburg, deployed to GitHub Pag
 - Theme settings configured in `hugo.toml` under `[params]`
 
 ### Build System
-- Hugo v0.131.0+ required
-- Minification enabled in production builds
-- Assets are processed and optimized automatically
+- Hugo v0.131.0 (extended version) required
+- Minification enabled in production builds (`--minify`)
+- Assets are processed and optimized automatically (SCSS compressed)
+- Dart Sass used for style processing
 - GitHub Actions handles automated deployment
 
 ### Deployment
@@ -56,23 +57,42 @@ This is a Hugo-based static blog for Stefan van Rensburg, deployed to GitHub Pag
 
 ## Content Front Matter
 
-Blog posts use TOML front matter:
+Blog posts use TOML front matter with these common fields:
 ```toml
 +++
 title = 'Post Title'
 date = 2025-08-23T14:48:57+02:00
 draft = false
-description = 'SEO description'
+description = 'Brief description for SEO and social sharing'
 tags = ['tag1', 'tag2']
 categories = ['Technology']
-author = 'Stefan van Rensburg'
+author = 'Stefan'
+showToc = true
+ShowReadingTime = true
+ShowBreadCrumbs = true
+ShowPostNavLinks = true
+ShowWordCount = true
+[cover]
+    image = ""
+    alt = "Alt text for the cover image"
+    hidden = true
 +++
 ```
+
+The archetypes in `archetypes/posts.md` provide a complete template with all available options.
 
 ## Development Notes
 
 - Local development server runs on http://localhost:1313
 - Draft posts are shown in development but not in production builds
 - The site is optimized for performance, accessibility, and SEO
-- All builds include garbage collection (`--gc`) and minification (`--minify`)
+- All production builds include garbage collection (`--gc`) and minification (`--minify`)
+- Math/LaTeX support enabled via Goldmark passthrough delimiters (`$$...$$`, `$...$`)
+- Syntax highlighting configured with line numbers enabled
 - No linting or testing framework is currently configured
+
+## Important Reminders
+
+- When creating new content, files are created with `draft = true` by default
+- Remember to set `draft = false` before content will appear in production builds
+- The theme is a git submodule - use `git submodule update --init --recursive` after cloning
